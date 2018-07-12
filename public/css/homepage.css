@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  background: url("../images/homepage_bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+.wrapper {
+  display: flex;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  margin: 0;
+  padding-right: 0;
+  width: auto;
+}
+.header img {
+  margin: 0;
+  width: 10vw;
+  height: auto;
+  display: inline;
+  margin-left: 70vw;
+}
+
+.header p {
+  display: inline;
+  margin: 0;
+  padding-top: 1vh;
+  padding-bottom: 0vh;
+  float: left;
+}
+
+.footer {
+  margin-top: 6vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#homepagecontent {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 25vw;
+  margin-right: 3vw;
+  margin-top: 30vh;
+  margin-bottom: 0;
+  padding: 1vw;
+  width: 50vw;
+  height: auto;
+}
+
+.splitcontent {
+  width: 50vw;
+  margin: 0;
+  margin-top: 3vh;
+  padding: 0;
+  height: 0.5vh;
+  background-color: white;
+}
+
+h3 {
+  display: block;
+  text-align: center;
+  color: orange;
+  font-size: 2.7vw;
+  padding: none;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  font-family: "Bauhaus 93 Regular";
+  text-shadow:
+ -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+   2px 2px 0 #000;
+   letter-spacing: 2px;
+}
+
+.coolpatrolimg1 {
+  float: left;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+}
+
+.navbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
+  margin-top: 30vh;
+  height: 70vh;
+  width: 6vw;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+a {
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+a: link {
+  text-decoration: none;
+}
+
+
+p {
+  margin: 0vw;
+  color: white;
+  font-family: sans-serif;
+}
