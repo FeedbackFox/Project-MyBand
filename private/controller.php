@@ -1,7 +1,8 @@
 <?php // CONTROLLER HAALT DATA BINNEN EN SET VIEW
 
-function homepage_action($smarty) {
+function homepage_action() {
   global $pageno;
+  global $smarty;
 
   $homepageposts = get_homepage_posts();
   $number_of_pages = calculate_pages();
@@ -39,8 +40,43 @@ function aboutus_action() {
   $smarty->display('footer.tpl');
 }
 
-function page_not_found_action($smarty) {
+function page_not_found_action() {
+  global $smarty;
   $smarty->display('notfound.tpl');
+}
+
+function tours_action() {
+  global $smarty;
+
+  $tourscontent = get_tours_content();
+
+  $smarty->assign('tourscontent', $tourscontent);
+
+  $smarty->assign('style','tours.css');
+  $smarty->assign('script', 'tours.js');
+
+  $smarty->display('html.tpl');
+  $smarty->display('header.tpl');
+  $smarty->display('aside.tpl');
+  $smarty->display('tours.tpl');
+  $smarty->display('footer.tpl');
+}
+
+function contact_action() {
+  global $smarty;
+
+  $contactcontent = get_contact_content();
+
+  $smarty->assign('contactcontent', $contactcontent);
+
+  $smarty->assign('style','contact.css');
+  $smarty->assign('script', 'contact.js');
+
+  $smarty->display('html.tpl');
+  $smarty->display('header.tpl');
+  $smarty->display('aside.tpl');
+  $smarty->display('contact.tpl');
+  $smarty->display('footer.tpl');
 }
 
  ?>

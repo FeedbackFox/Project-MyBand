@@ -8,6 +8,16 @@
          return $mysqli;
   }
 
+  function calculate_pages() {
+    $mysqli = make_connection();
+    $query = "SELECT * FROM myband_homepage";
+    $result = $mysqli->query($query) or die ('Error querying. gay');
+    $rows = $result->num_rows;
+    $number_of_pages = ceil($rows / ARTICLES_PER_PAGE);
+
+    return $number_of_pages;
+  }
+
   function get_homepage_posts() {
     global $pageno;
     $title = array();
@@ -39,15 +49,31 @@
     return $results;
   }
 
-function calculate_pages() {
-  $mysqli = make_connection();
-  $query = "SELECT * FROM myband_homepage";
-  $result = $mysqli->query($query) or die ('Error querying. gay');
-  $rows = $result->num_rows;
-  $number_of_pages = ceil($rows / ARTICLES_PER_PAGE);
+  function get_tours_content() {
+    $mysqli = make_connection();
+    $query = "SELECT content FROM myband_tours WHERE ID = 1";
+    $stmt = $mysqli->prepare($query) or die ('Error preparing list');
+    $stmt->bind_result($title) or die ("error binding result");
+    $stmt->execute() or die ('error executing 1.');
+    $results = array();
+    while ($stmt->fetch()) {
+      $results[] = $title;
+    }
+    return $results;
+  }
 
-  return $number_of_pages;
-}
+  function get_contact_content() {
+    $mysqli = make_connection();
+    $query = "SELECT content FROM myband_contact WHERE ID = 1";
+    $stmt = $mysqli->prepare($query) or die ('Error preparing list');
+    $stmt->bind_result($title) or die ("error binding result");
+    $stmt->execute() or die ('error executing 1.');
+    $results = array();
+    while ($stmt->fetch()) {
+      $results[] = $title;
+    }
+    return $results;
+  }
 
 
  ?>

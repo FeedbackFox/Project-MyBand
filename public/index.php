@@ -14,10 +14,11 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 $pageno = isset($_GET['no']) ? $_GET['no'] : 1;
 
 switch ($page) {
-  case 'home': homepage_action($smarty); break;
-  case 'contact': contact_action($smarty); break;
+  case 'home': homepage_action(); break;
+  case 'contact': contact_action(); break;
   case 'aboutus': aboutus_action(); break;
-  default: page_not_found_action($smarty); break;
+  case 'tours': tours_action(); break;
+  default: page_not_found_action(); break;
 
 }
 
