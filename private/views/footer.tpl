@@ -4,5 +4,6 @@
     <script src="javascript/{$script}"></script>
 
     </script>
+	</div>
   </body>
 </html>

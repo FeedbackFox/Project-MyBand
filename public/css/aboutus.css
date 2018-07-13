@@ -9,11 +9,13 @@ body {
 
 }
 
-
+html {
+  font-family: sans-serif;
+  color: white;
+}
 
 .wrapper {
   display: block;
-  height: 100%;
 }
 
 .header {
@@ -50,10 +52,11 @@ body {
 .footer {
   margin-top: 6vh;
   background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 
-#homepagecontent {
+#aboutuscontent {
   background-color: rgba(0, 0, 0, 0.5);
   margin-left: 25vw;
   margin-right: 3vw;
@@ -61,6 +64,7 @@ body {
   margin-bottom: 0;
   padding: 1vw;
   width: 50vw;
+  min-height: 67.5vh;
   height: auto;
 }
 
@@ -182,7 +186,7 @@ h4 {
 }
 
 @media only screen and (max-width: 1500px) {
-  #homepagecontent {
+  #aboutuscontent {
     width: 55vw;
     margin-left: 17.5vw;
   }
@@ -192,7 +196,7 @@ h4 {
 }
 
 @media only screen and (max-width: 1250px) {
-  #homepagecontent {
+  #aboutuscontent {
     margin-left: 15vw;
     width: 60vw;
   }
@@ -225,7 +229,7 @@ h4 {
 }
 
 @media only screen and (max-width: 1000px) {
-  #homepagecontent {
+  #aboutuscontent {
     margin-left: 10vw;
     width: 70vw;
   }
@@ -320,13 +324,7 @@ h4 {
 
 
 
-    .homepagecontent {
-      width: 100vw;
-      margin: 0;
-      padding: 0;
-      height: auto;
-    }
-    #homepagecontent {
+    #aboutuscontent {
       margin: 0;
       margin-top: 20vh;
       width: auto;
